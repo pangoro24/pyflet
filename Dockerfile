@@ -10,6 +10,8 @@ RUN pip install --no-cache-dir -r requirements.txt
 
 COPY ./app ./app
 
+ENV FLET_SERVER_PORT=8080
+
 EXPOSE 8080
 
 CMD ["python", "./app/main.py"]
