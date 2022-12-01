@@ -1,9 +1,12 @@
 version: '3.8'
 services:
   webapp: 
-    build: .
+    build:
+      context: .
+      args:
+        - PORT=${PORTEXPOSED}
     ports:
-      - '8080:8080'
+      - '${PORTEXPOSED}:${PORTEXPOSED}'
     restart: always
     container_name: fletappcontainer
     image: webapp/fletapp:latest

@@ -9,9 +9,9 @@ COPY requirements.txt /app
 RUN pip install --no-cache-dir -r requirements.txt
 
 COPY ./app ./app
+ARG PORT
+ENV FLET_SERVER_PORT=$PORT
 
-ENV FLET_SERVER_PORT=8080
-
-EXPOSE 8080
+EXPOSE $PORT
 
 CMD ["python", "./app/main.py"]
