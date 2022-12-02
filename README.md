@@ -1,6 +1,4 @@
-
-
-#### History of commands to create the boilerplate
+#### History of commands to create the boilerplate code
 - python -m venv env
 - env\scripts\activate.bat
 - pip install flet
@@ -14,13 +12,13 @@
 #### Build docker image and run image from the docker container
 - docker build --tag webapp/fletapp:latest .
 - docker run -d -p 8080:8080 webapp/fletapp
-- docker image rm webapp/fletapp:latest
 
 #### Running from docker compose:
-docker compose up -d
+- docker compose up -d
 
 #### Clean container and image
-docker compose down
+- docker compose down
+- docker image rm webapp/fletapp:latest
 
 
 #### Reference:
